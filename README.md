@@ -1,3 +1,5 @@
+[![Build Status](http://img.shields.io/travis/badem4o/cephas.svg?style=flat)](https://travis-ci.org/badem4o/cephas)
+
 #Cephas
 
 Cephas is a micro library for validating simple objects against a schema.
