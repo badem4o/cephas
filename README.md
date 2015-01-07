@@ -2,7 +2,7 @@
 
 #Cephas
 
-Cephas is a micro library for validating simple objects against a schema.
+Cephas is a little tool for validating simple objects against a schema.
 It is useful for front end form validation and intended for use with browserify.
 
 Usage:
