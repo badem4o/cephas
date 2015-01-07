@@ -10,6 +10,10 @@ function noType() {
   getErrors('1234', mocks.getErrors.name1);
 }
 
+function noMessage() {
+  getErrors('', mocks.getErrors.name3);
+}
+
 describe('cephas@getErrors', function () {
   it('Should return the proper error if prop is empty', function () {
     expect(getErrors('', mocks.getErrors.name)).to.equal('Please provide your name');
@@ -19,6 +23,9 @@ describe('cephas@getErrors', function () {
   });
   it('Should throw an error if no type is specified', function () {
     expect(noRequired).to.throw('Your schema needs to specify if a property is required');
+  });
+  it('Should throw an error if no message is specified', function () {
+    expect(noMessage).to.throw('Your schema needs to provide an error message');
   });
   it('Should return the proper error if prop is all spaces', function () {
     expect(getErrors('   ', mocks.getErrors.name)).to.equal('Please provide your name');

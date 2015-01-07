@@ -12,6 +12,10 @@ exports.getErrors = {
     type: 'string',
     message: 'Please provide your name'
   },
+  name3: {
+    type: 'string',
+    required: true
+  },
   email: {
     type: 'string',
     required: true,
@@ -47,19 +51,19 @@ exports.schema = {
 exports.noErrors = {
   name: 'badem4o',
   email: 'badem4o@example.com',
-  age: '29'
+  age: '19'
 };
 
 exports.noName = {
   name: '',
   email: 'badem4o@example.com',
-  age: '29'
+  age: '19'
 };
 
 exports.noEmail = {
   name: 'badem4o',
   email: '',
-  age: '29'
+  age: '19'
 };
 
 exports.noAge = {
