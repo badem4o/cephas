@@ -1,0 +1,31 @@
+{
+  "name": "cephas",
+  "version": "1.0.0",
+  "description": "Validate simple objects against a schema",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec --recursive",
+    "test-dev": "./node_modules/.bin/mocha -w -R spec --recursive"
+  },
+  "keywords": [
+    "validate",
+    "validation",
+    "form",
+    "object",
+    "micro",
+    "library"
+  ],
+  "author": "badem4o",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/badem4o/cephas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/badem4o/cephas/issues"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  }
+}
