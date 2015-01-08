@@ -14,7 +14,8 @@ exports.getErrors = {
   },
   name3: {
     type: 'string',
-    required: true
+    required: true,
+    match: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/igm
   },
   email: {
     type: 'string',
