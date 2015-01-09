@@ -59,6 +59,6 @@ console.log(erros);
 */
 
 ```
+Pretty self explanatory stuff, also the match property of your schema could be a function to which cephas will pass the current property at hand as the only parameter and will expect true or false in return.
 
-Cheers,
-  badem4o.
+Cheers!
