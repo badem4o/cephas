@@ -22,6 +22,10 @@ function noMessageNoMatch() {
   getErrors('abcd', mocks.getErrors.name3);
 }
 
+function noMessageBadem4o() {
+  getErrors('badem4o', mocks.getErrors.badem4o2);
+}
+
 describe('cephas@getErrors', function () {
   it('Should return the proper error if prop is empty', function () {
     expect(getErrors('', mocks.getErrors.name)).to.equal('Please provide your name');
@@ -36,6 +40,7 @@ describe('cephas@getErrors', function () {
     expect(noMessageEmpty).to.throw('Your schema needs to provide an error message');
     expect(noMessageWrongType).to.throw('Your schema needs to provide an error message');
     expect(noMessageNoMatch).to.throw('Your schema needs to provide an error message');
+    expect(noMessageBadem4o).to.throw('Your schema needs to provide an error message');
   });
   it('Should return the proper error if prop is all spaces', function () {
     expect(getErrors('   ', mocks.getErrors.name)).to.equal('Please provide your name');
@@ -52,6 +57,9 @@ describe('cephas@getErrors', function () {
   });
   it('Should return false if string', function () {
     expect(getErrors('fakeEmail', mocks.getErrors.name)).to.equal(false);
+  });
+  it('Should be able to take a function as match', function () {
+    expect(getErrors('badem4o', mocks.getErrors.badem4o)).to.equal('Make sure you are badem4o');
   });
   it('Should return false if number', function () {
     expect(getErrors('12345', mocks.getErrors.age)).to.equal(false);
