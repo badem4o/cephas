@@ -49,8 +49,8 @@ describe('cephas@getErrors', function () {
     expect(getErrors('abc', mocks.getErrors.age)).to.equal('Please provide your age');
     expect(getErrors('123', mocks.getErrors.name)).to.equal('Please provide your name');
   });
-  it('Should throw an error if no type is specified', function () {
-    expect(noType).to.throw('Your chema needs to specify a type for each property');
+  it('Should throw an error if no type or match is specified', function () {
+    expect(noType).to.throw('Your chema needs to specify type or match for each property');
   });
   it('Should throw an error if no match', function () {
     expect(getErrors('fakeEmail', mocks.getErrors.email)).to.equal('Please provide your email address');
