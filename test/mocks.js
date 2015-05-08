@@ -31,6 +31,17 @@ exports.getErrors = {
       }
     }
   },
+  badem4o3: {
+    required: true,
+    match: function (prop) {
+      if (prop === 'badem4o') {
+        return true;
+      } else {
+        return 'Make sure you are badem4o from match function';
+      }
+    },
+    message: 'Make sure you are badem4o'
+  },
   email: {
     required: true,
     match: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/igm,

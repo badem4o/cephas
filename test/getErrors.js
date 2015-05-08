@@ -41,6 +41,7 @@ describe('cephas@getErrors', function () {
   });
   it('Should be able to take a function as match', function () {
     expect(getErrors('badem4oo', mocks.getErrors.badem4o)).to.equal('Make sure you are badem4o');
+    expect(getErrors('badem4oo', mocks.getErrors.badem4o3)).to.equal('Make sure you are badem4o from match function');
   });
   it('Should return false if match', function () {
     expect(getErrors('badem4o@example.com', mocks.getErrors.email)).to.equal(false);
