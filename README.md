@@ -12,20 +12,39 @@ Usage:
 var cephas = require('cephas');
 var schema = cephas({
   name: {
-    type: 'string',
     required: true,
     message: 'Please provide your name'
   },
   email: {
-    type: 'string',
     required: true,
-    match: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/igm,
+    match: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/igm, // you can match on regex
     message: 'Please provide your email address'
   },
   age: {
-    type: 'number',
     required: true,
     message: 'Please provide your age'
+  },
+  customMatchFunctionDefaultMsg: {
+    required: true,
+    match: function (prop) { // You can match with a function
+      if (prop === 'happy') {
+        return true;
+      } else {
+        return false; // If you return false the default err msg will be used
+      }
+    },
+    message: 'Please cheer up a bit!'
+  },
+  customMatchFunctionCustomMsg: {
+    required: true,
+    match: function (prop) {
+      if (prop === 'happy') {
+        return true;
+      } else {
+        return 'Please cheer up a bit!!!'; // Or you can return a custom msg
+      }
+    },
+    message: 'This message will be ignored because the function returns a string'
   }
 });
 
@@ -59,6 +78,6 @@ console.log(erros);
 */
 
 ```
-Pretty self explanatory stuff, also the match property of your schema could be a function to which cephas will pass the current property at hand as the only parameter and will expect true or false in return.
+Pretty self explanatory stuff.
 
 Cheers!
