@@ -1,5 +1,5 @@
-[![Build Status](http://img.shields.io/travis/badem4o/cephas.svg?style=flat)](https://travis-ci.org/badem4o/cephas)
-[![Coverage Status](https://img.shields.io/coveralls/badem4o/cephas.svg?style=flat)](https://coveralls.io/r/badem4o/cephas)
+[![Build Status](https://travis-ci.org/badem4o/cephas.svg?branch=v2.0.1)](https://travis-ci.org/badem4o/cephas)
+[![Coverage Status](https://coveralls.io/repos/badem4o/cephas/badge.svg?branch=master&service=github)](https://coveralls.io/github/badem4o/cephas?branch=master)
 #Cephas
 
 Cephas is a little tool for validating simple objects against a schema.
