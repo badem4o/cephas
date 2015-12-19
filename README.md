@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/badem4o/cephas.svg?branch=v2.0.1)](https://travis-ci.org/badem4o/cephas)
-[![Coverage Status](https://coveralls.io/repos/badem4o/cephas/badge.svg?branch=master&service=github)](https://coveralls.io/github/badem4o/cephas?branch=master)
+[![Build Status](https://travis-ci.org/milyord/cephas.svg?branch=v2.0.1)](https://travis-ci.org/milyord/cephas)
+[![Coverage Status](https://coveralls.io/repos/milyord/cephas/badge.svg?branch=master&service=github)](https://coveralls.io/github/milyord/cephas?branch=master)
+
 #Cephas
 
 Cephas is a little tool for validating simple objects against a schema.
-It is useful for front end form validation and intended for use with browserify.
 
 Usage:
 
@@ -50,8 +50,8 @@ var schema = cephas({
 
 // In this case errors will equal false as all props pass validation
 var errors = schema.validate({
-  name: 'badem4o',
-  email: 'badem4o@example.com',
+  name: 'milyord',
+  email: 'milyord@example.com',
   age: '19'
 });
 
