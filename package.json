@@ -1,6 +1,6 @@
 {
   "name": "cephas",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Validate simple objects against a schema",
   "main": "index.js",
   "scripts": {
