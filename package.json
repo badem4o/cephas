@@ -20,10 +20,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/badem4o/cephas.git"
+    "url": "https://github.com/milyord/cephas.git"
   },
   "bugs": {
-    "url": "https://github.com/badem4o/cephas/issues"
+    "url": "https://github.com/milyord/cephas/issues"
   },
   "devDependencies": {
     "chai": "^1.10.0",
