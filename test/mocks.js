@@ -14,9 +14,9 @@ exports.getErrors = {
     required: true,
     match: function (prop) {
       if (prop === 'badem4o') {
-        return true;
+        return true
       } else {
-        return false;
+        return false
       }
     },
     message: 'Make sure you are badem4o'
@@ -25,9 +25,9 @@ exports.getErrors = {
     required: true,
     match: function (prop) {
       if (prop === 'badem4o') {
-        return true;
+        return true
       } else {
-        return false;
+        return false
       }
     }
   },
@@ -35,9 +35,9 @@ exports.getErrors = {
     required: true,
     match: function (prop) {
       if (prop === 'badem4o') {
-        return true;
+        return true
       } else {
-        return 'Make sure you are badem4o from match function';
+        return 'Make sure you are badem4o from match function'
       }
     },
     message: 'Make sure you are badem4o'
@@ -47,7 +47,7 @@ exports.getErrors = {
     match: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/igm,
     message: 'Please provide your email address'
   }
-};
+}
 
 exports.schema = {
   name: {
@@ -63,28 +63,28 @@ exports.schema = {
     required: true,
     message: 'Please provide your age'
   }
-};
+}
 
 exports.noErrors = {
   name: 'badem4o',
   email: 'badem4o@example.com',
   age: '19'
-};
+}
 
 exports.noName = {
   name: '',
   email: 'badem4o@example.com',
   age: '19'
-};
+}
 
 exports.noEmail = {
   name: 'badem4o',
   email: '',
   age: '19'
-};
+}
 
 exports.noAge = {
   name: 'badem4o',
   email: 'badem4o@example.com',
   age: ''
-};
+}

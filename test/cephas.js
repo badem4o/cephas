@@ -1,21 +1,21 @@
-var expect = require('chai').expect;
-var mocks  = require('./mocks');
-var cephas = require('../index');
-var schema = cephas(mocks.schema);
+var expect = require('chai').expect
+var mocks = require('./mocks')
+var cephas = require('../index')
+var validate = cephas(mocks.schema)
 
 describe('Cephas', function () {
   it('Should return false if no errors', function () {
-    expect(schema.validate(mocks.noErrors)).to.equal(false);
-  });
+    expect(validate(mocks.noErrors)).to.equal(false)
+  })
   it('Should return an object with errors', function () {
-    expect(schema.validate(mocks.noName).name).to.equal('Please provide your name');
-    expect(schema.validate(mocks.noName).email).to.equal(undefined);
-    expect(schema.validate(mocks.noName).age).to.equal(undefined);
-    expect(schema.validate(mocks.noEmail).name).to.equal(undefined);
-    expect(schema.validate(mocks.noEmail).email).to.equal('Please provide your email address');
-    expect(schema.validate(mocks.noEmail).age).to.equal(undefined);
-    expect(schema.validate(mocks.noAge).name).to.equal(undefined);
-    expect(schema.validate(mocks.noAge).email).to.equal(undefined);
-    expect(schema.validate(mocks.noAge).age).to.equal('Please provide your age');
-  });
-});
+    expect(validate(mocks.noName).name).to.equal('Please provide your name')
+    expect(validate(mocks.noName).email).to.equal(undefined)
+    expect(validate(mocks.noName).age).to.equal(undefined)
+    expect(validate(mocks.noEmail).name).to.equal(undefined)
+    expect(validate(mocks.noEmail).email).to.equal('Please provide your email address')
+    expect(validate(mocks.noEmail).age).to.equal(undefined)
+    expect(validate(mocks.noAge).name).to.equal(undefined)
+    expect(validate(mocks.noAge).email).to.equal(undefined)
+    expect(validate(mocks.noAge).age).to.equal('Please provide your age')
+  })
+})
