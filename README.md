@@ -3,14 +3,14 @@
 
 #Cephas
 
-Cephas is a little tool for validating simple objects against a schema.
+Cephas is a little tool for validating simple objects against a schema. Works great with redux-form.
 
 Usage:
 
 ```javascript
 
 var cephas = require('cephas');
-var schema = cephas({
+var validate = cephas({
   name: {
     required: true,
     message: 'Please provide your name'
@@ -49,7 +49,7 @@ var schema = cephas({
 });
 
 // In this case errors will equal false as all props pass validation
-var errors = schema.validate({
+var errors = validate({
   name: 'milyord',
   email: 'milyord@example.com',
   age: '19'
@@ -62,7 +62,7 @@ If errors exist:
 ```javascript
 
 // In this case errors will be an object as props fail validation
-var errors = schema.validate({
+var errors = validate({
   name: '',
   email: '',
   age: ''
