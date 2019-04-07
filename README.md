@@ -3,7 +3,7 @@
 
 #Cephas
 
-Cephas is a little tool for validating simple objects against a schema. Works great with redux-form.
+Cephas is a little tool for validating simple objects against a schema.
 
 Usage:
 
