@@ -1,12 +1,12 @@
 {
-  "name": "cephas",
+  "name": "Cephas",
   "version": "3.0.0",
   "description": "Validate simple objects against a schema",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha -R spec --recursive",
     "test:dev": "./node_modules/.bin/mocha -w -R spec --recursive",
-    "coveralls": "./node_module/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coveralls": "./node_modules/.bin/nyc npm test && nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls && rm -rf ./.nyc_output"
   },
   "keywords": [
     "validate",
@@ -14,8 +14,7 @@
     "form",
     "object",
     "micro",
-    "library",
-    "redux-form"
+    "library"
   ],
   "author": "milyord",
   "license": "MIT",
@@ -27,13 +26,11 @@
     "url": "https://github.com/milyord/cephas/issues"
   },
   "devDependencies": {
-    "chai": "^1.10.0",
-    "coveralls": "^2.11.2",
-    "eslint": "^3.1.0",
-    "eslint-config-standard": "^5.3.5",
-    "eslint-plugin-promise": "^2.0.0",
-    "eslint-plugin-standard": "^2.0.0",
-    "istanbul": "^0.3.5",
-    "mocha": "^2.1.0"
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.9",
+    "eslint": "^6.8.0",
+    "mocha": "^7.1.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^15.0.0"
   }
 }
