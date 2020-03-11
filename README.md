@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/milyord/cephas.svg?branch=v2.0.1)](https://travis-ci.org/milyord/cephas)
 [![Coverage Status](https://coveralls.io/repos/milyord/cephas/badge.svg?branch=master&service=github)](https://coveralls.io/github/milyord/cephas?branch=master)
 
-#Cephas
+# Cephas
 
 Cephas is a little tool for validating simple objects against a schema.
 
