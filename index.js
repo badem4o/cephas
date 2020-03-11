@@ -1,11 +1,11 @@
-var getError = require("./lib/getErrors");
+const getError = require("./lib/getErrors");
 
 module.exports = function Schema(schema) {
   return function validate(obj) {
-    var errors = {};
-    var error = "";
-    var anyErrors = false;
-    for (var prop in schema) {
+    const errors = {};
+    let error = "";
+    let anyErrors = false;
+    for (let prop in schema) {
       if (schema.hasOwnProperty(prop) && obj.hasOwnProperty(prop)) {
         error = getError(obj[prop], schema[prop]);
         anyErrors = error || anyErrors;
