@@ -1,90 +1,90 @@
 exports.getErrors = {
   name: {
     required: true,
-    message: 'Please provide your name'
+    message: "Please provide your name",
   },
   name2: {
-    message: 'Please provide your name'
+    message: "Please provide your name",
   },
   name3: {
     required: true,
-    match: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/igm
+    match: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/gim,
   },
-  badem4o: {
+  milyord: {
     required: true,
     match: function (prop) {
-      if (prop === 'badem4o') {
-        return true
+      if (prop === "milyord") {
+        return true;
       } else {
-        return false
+        return false;
       }
     },
-    message: 'Make sure you are badem4o'
+    message: "Make sure you are milyord",
   },
-  badem4o2: {
+  milyord2: {
     required: true,
     match: function (prop) {
-      if (prop === 'badem4o') {
-        return true
+      if (prop === "milyord") {
+        return true;
       } else {
-        return false
-      }
-    }
-  },
-  badem4o3: {
-    required: true,
-    match: function (prop) {
-      if (prop === 'badem4o') {
-        return true
-      } else {
-        return 'Make sure you are badem4o from match function'
+        return false;
       }
     },
-    message: 'Make sure you are badem4o'
+  },
+  milyord3: {
+    required: true,
+    match: function (prop) {
+      if (prop === "milyord") {
+        return true;
+      } else {
+        return "Make sure you are milyord from match function";
+      }
+    },
+    message: "Make sure you are milyord",
   },
   email: {
     required: true,
-    match: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/igm,
-    message: 'Please provide your email address'
-  }
-}
+    match: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/gim,
+    message: "Please provide your email address",
+  },
+};
 
 exports.schema = {
   name: {
     required: true,
-    message: 'Please provide your name'
+    message: "Please provide your name",
   },
   email: {
     required: true,
-    match: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/igm,
-    message: 'Please provide your email address'
+    match: /([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}/gim,
+    message: "Please provide your email address",
   },
   age: {
     required: true,
-    message: 'Please provide your age'
-  }
-}
+    message: "Please provide your age",
+  },
+};
 
 exports.noErrors = {
-  name: 'badem4o',
-  email: 'badem4o@example.com',
-  age: '19'
-}
+  name: "milyord",
+  email: "milyord@example.com",
+  age: "19",
+};
 
 exports.noName = {
-  name: '',
-  email: 'badem4o@example.com',
-  age: '19'
-}
+  name: "",
+  email: "milyord@example.com",
+  age: "19",
+};
 
 exports.noEmail = {
-  name: 'badem4o',
-  email: '',
-  age: '19'
-}
+  name: "milyord",
+  email: "",
+  age: "19",
+};
 
 exports.noAge = {
-  name: 'badem4o',
-  email: 'badem4o@example.com',
-  age: ''
-}
+  name: "milyord",
+  email: "milyord@example.com",
+  age: "",
+};
