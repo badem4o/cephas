@@ -1,4 +1,4 @@
-exports.getErrors = {
+const getErrors = {
   name: {
     required: true,
     message: "Please provide your name",
@@ -49,7 +49,7 @@ exports.getErrors = {
   },
 };
 
-exports.schema = {
+const schema = {
   name: {
     required: true,
     message: "Please provide your name",
@@ -65,26 +65,28 @@ exports.schema = {
   },
 };
 
-exports.noErrors = {
+const noErrors = {
   name: "milyord",
   email: "milyord@example.com",
   age: "19",
 };
 
-exports.noName = {
+const noName = {
   name: "",
   email: "milyord@example.com",
   age: "19",
 };
 
-exports.noEmail = {
+const noEmail = {
   name: "milyord",
   email: "",
   age: "19",
 };
 
-exports.noAge = {
+const noAge = {
   name: "milyord",
   email: "milyord@example.com",
   age: "",
 };
+
+export { getErrors, schema, noErrors, noName, noEmail, noAge };

@@ -1,13 +1,13 @@
-const getError = require("./lib/getErrors");
+import getErrors from "./getErrors";
 
-module.exports = function Schema(schema) {
+function cephas(schema) {
   return function validate(obj) {
     const errors = {};
     let error = "";
     let anyErrors = false;
     for (let prop in schema) {
       if (schema.hasOwnProperty(prop) && obj.hasOwnProperty(prop)) {
-        error = getError(obj[prop], schema[prop]);
+        error = getErrors(obj[prop], schema[prop]);
         anyErrors = error || anyErrors;
         if (error) {
           errors[prop] = error;
@@ -20,4 +20,6 @@ module.exports = function Schema(schema) {
       return false;
     }
   };
-};
+}
+
+export default cephas;

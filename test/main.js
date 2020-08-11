@@ -1,6 +1,6 @@
-const expect = require("chai").expect;
-const mocks = require("./mocks");
-const cephas = require("../index");
+import { expect } from "chai";
+import * as mocks from "./mocks";
+import cephas from "../src/main";
 const validate = cephas(mocks.schema);
 
 describe("Cephas", function () {

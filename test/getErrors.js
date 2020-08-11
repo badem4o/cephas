@@ -1,6 +1,6 @@
-const expect = require("chai").expect;
-const mocks = require("./mocks");
-const getErrors = require("../lib/getErrors");
+import { expect } from "chai";
+import * as mocks from "./mocks";
+import getErrors from "../src/getErrors";
 
 function noRequired() {
   getErrors("", mocks.getErrors.name2);

@@ -1,4 +1,4 @@
-module.exports = function getError(prop, schemaProp) {
+export default function getError(prop, schemaProp) {
   let result = false;
   if (schemaProp.required) {
     if (!/\S/.test(prop)) {
@@ -34,4 +34,4 @@ module.exports = function getError(prop, schemaProp) {
     }
   }
   return result;
-};
+}
