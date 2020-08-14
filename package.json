@@ -10,7 +10,7 @@
     "dev": "rollup -c -w",
     "test": "./node_modules/.bin/mocha --require esm -R spec --recursive",
     "test:dev": "./node_modules/.bin/mocha --require esm -w -R spec --recursive",
-    "publish": "./node_modules/.bin/np",
+    "publish": "npm run build && ./node_modules/.bin/np",
     "coverage": "./node_modules/.bin/c8 --all --include=src/*.js npm test && rm -rf ./coverage",
     "coverage:lcov": "./node_modules/.bin/c8 --all --include=src/*.js --reporter=lcovonly npm test",
     "coveralls": "npm run coverage:lcov && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage"
