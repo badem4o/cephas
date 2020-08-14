@@ -8,7 +8,8 @@ Cephas is a little tool for validating simple objects against a schema.
 Usage:
 
 ```javascript
-const cephas = require("cephas");
+import cephas from "cephas";
+
 const validate = cephas({
   name: {
     required: true,
